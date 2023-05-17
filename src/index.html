@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neca Website</title>
+
+  <link href="/dist/output.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous"/> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.0/tailwind.min.css" integrity="sha256-CAI/7ThhltsmP2L2zKBYa7FknB3ZwFbD0nqL8FCdxdc=" crossorigin="anonymous"/>
+
+</head>
+
+<!--aligning body center-->
+<body class="bg-slate-50">
+    <nav class="bg-white" x-data="{navbarOpen:false}">
+        <!--container-->
+        <div class="container md:flex flex-wrap items-center justify-between mx-auto py-2">
+            <div class="flex sm:flex sm:justify-between items-center">
+                <!--logo-->
+                <a href="#"><img class="h-24 inline-flex md:shrink-0" src="assets/images/logo.jpg" alt=""></a>
+                <!--logo-->
+
+                <!--toggler button-->
+                <button class="md:hidden inline-flex items-center justify-center border h-10 w-10 ml-auto rounded-md outline-none focus:outline-none"
+                    @click="navbarOpen = !navbarOpen">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>  
+                </button>
+                <!--toggler button-->
+            </div>
+            
+
+            <!--menu-->
+            <div class="w-full md:inline-flex md:w-auto mt-2 mt:mt-0" :class="{'hidden':!navbarOpen, 'flex':navbarOpen}">
+                <ul class="w-full lg:w-auto flex flex-col md:items-center md:flex-row">
+                    <li>
+                        <a href="#" class="flex px-4 py-2 rounded-md text-blue-600">Home</a>
+                    </li>
+
+                    <!--dropdown-->
+                    <li class="relative" x-data="{dropdownOpen:false}">
+                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md hover:text-blue-400"
+                        @click="dropdownOpen = !dropdownOpen"
+                        >About</button>
+                        <!--dropdown menu-->
+                        <div class="md:absolute bg-white md:bg-blue-50 right-0 rounded-md p-2" :class="{'hidden':!dropdownOpen, 'flex flex-col':dropdownOpen}">
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Mission and Vision</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Aims and Objectives</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Message From President</a>
+                                </li> 
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Executive Board</a>
+                                </li>    
+                            </ul>
+                        </div>
+                        <!--dropdown menu-->
+                    </li>
+                    <!--dropdown-->
+
+
+
+                    <li>
+                        <a href="#" class="flex px-4 py-2 rounded-md hover:text-blue-400">Members</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex px-4 py-2 rounded-md hover:text-blue-400">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex px-4 py-2 rounded-md hover:text-blue-400">Activities</a>
+                    </li>
+                    <li>
+                        <button href="#" class="flex px-4 py-2 rounded-md md:text-white md:bg-red-800 md:hover:bg-red-600 md:hover:text-white">Contact Us</button>
+                    </li>
+                </ul>
+            </div>
+            <!--menu-->
+
+        </div>
+        <!--container-->
+    </nav>
+
+
+
+
+
+
+
+    <!-- <nav class="flex items-center p-3 flex-wrap">
+        logo
+        <a href="#" class="p-2 mr-4 inline-flex items-center">
+            <img src="assets/images/logo.jpg" class="h-20" alt="">
+        </a>
+
+        hamburger menu
+        <button class="inline-flex p-3 hover:bg-blue-800 hover:text-white rounded lg:hidden ml-auto nav-toggler" data-target="#navigation">
+            <i class="material-icons">menu</i>
+        </button>
+
+        top navigation bar
+        <div class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto" id="navigation">
+            <div class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto">
+                <ul>
+                    dropdown
+                    <li class="relative" x-data="{dropdownOpen:false}">
+                        <button href="#" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-gray-900 hover:text-white">
+                            <span class="inline-flex items-center">About
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg> 
+                            </span>
+                        </button>
+
+                        dropdown menu
+                        <button>
+                            <div class="lg:absolute bg-blue-50 right-0 rounded-md p-2 w-max" :class="{'hidden':!dropdownOpen}">
+                                <ul class="space-y-2">
+                                    <li>
+                                        <a href="#">About Us</a>
+                                    </li>
+                                    <li class="hover:bg-gray-500">
+                                        <a href="#">Mission and Vision</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Aims and Objectives</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Message From President</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Executive Board</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </button>
+                    </li>                    
+                </ul>
+
+
+                <a href="#" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-gray-900 hover:text-white">
+                    <span class="inline-flex items-center">Members
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg> 
+                    </span>
+                </a>
+
+                <a href="#" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-gray-900 hover:text-white">
+                    <span class="inline-flex items-center">Gallery
+                    </span>
+                </a>
+
+                <a href="#" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-gray-900 hover:text-white">
+                    <span class="inline-flex items-center">Activities
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg> 
+                    </span>
+                </a>
+
+                <button class="btn btn-red">Contact Us</button>    
+                
+            </div>
+        </div>
+    </nav> -->
+
+    <!-- <div class="nav bg-white w-full">
+        <div class="flex justify-between">
+            <div class="md:shrink-0">
+                <img src="assets/images/logo.jpg" class="h-20" alt="">
+            </div>
+            
+            <button class="inline-flex p-3 hover:bg-blue-800 hover:text-white rounded lg:hidden ml-auto nav-toggler" data-target="#navigation">
+                <i class="material-icons">menu</i>
+            </button>
+
+            <div class="top-nav hidden items-center gap-9 w-full lg:inline-flex lg:w-auto" id="navigation">
+                <div>
+                    <a class="flex items-center" href="">About
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg> 
+                    </a>     
+                </div>
+
+                <div>
+                    <a class="flex items-center" href="">Members
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg> 
+                    </a>     
+                </div>
+
+                <div>
+                    <a class="flex items-center" href="">Gallery</a>
+                </div>
+
+                <div>
+                    <a class="flex items-center" href="">Activities
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg> 
+                    </a>     
+                </div>
+                <button class="btn btn-red">Contact Us</button>            
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="main-body bg-slate-100">
+        <div class="hero container p-0">
+            <div class="flex items-center gap-10 py-24">
+                <div class="flex-column">
+                    <div class="flex-column gap-4">
+                        <h2 class="text-6xl">Achieving Your Educational Dreams</h2>
+                        <p>Full-service agency dedicated to providing personalized guidance, expert assistance and comprehensive support for all aspects of your abroad education journey</p>
+                    </div>
+                    <button class="btn btn-red">Learn More
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>                  
+                    </button>
+                </div>
+                <div class="flex">
+                    <img src="assets/images/Photo.png" alt="">
+                </div>
+            </div>
+        </div>   
+        
+        <div class="container bg-blue-950">
+            <div class="flex items-center gap-10 py-24">
+                <div class="flex">
+                    <img src="assets/images/president.png" alt="">
+                </div>
+                <div class="flex-columnv text-white">
+                    <div class="flex-column">
+                        <h2 class="text-6xl text-white">Message From the President</h2>
+                        <p>NECA, in a very short span of its struggle tenure, has been succeeding in gaining a better reputation for the quality educational services that are provided by its members. NECA members are dedicated to providing quality service for students and their guardians in the first place.</p>
+                    </div>
+                    <div class="flex-column">
+                        <p>Santosh Pyakurel</p>
+                        <p>President, NECA</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>  
+    </div> -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn{
+    @apply font-medium py-4 px-6;
+}
+
+.btn-red{
+    @apply flex items-center bg-red-800 text-white gap-4 rounded;
+}
