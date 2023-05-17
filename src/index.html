@@ -6,46 +6,47 @@
   <title>Neca Website</title>
 
   <link href="/dist/output.css" rel="stylesheet">
+  
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous"/> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.0/tailwind.min.css" integrity="sha256-CAI/7ThhltsmP2L2zKBYa7FknB3ZwFbD0nqL8FCdxdc=" crossorigin="anonymous"/>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.0/tailwind.min.css" integrity="sha256-CAI/7ThhltsmP2L2zKBYa7FknB3ZwFbD0nqL8FCdxdc=" crossorigin="anonymous"/> -->
 
 </head>
 
 <!--aligning body center-->
 <body class="bg-slate-50">
     <nav class="bg-white" x-data="{navbarOpen:false}">
-        <!--container-->
+        <!--container start-->
         <div class="container md:flex flex-wrap items-center justify-between mx-auto py-2">
             <div class="flex sm:flex sm:justify-between items-center">
-                <!--logo-->
-                <a href="#"><img class="h-24 inline-flex md:shrink-0" src="assets/images/logo.jpg" alt=""></a>
-                <!--logo-->
+                <!--logo start-->
+                <a href="index.html"><img class="h-24 inline-flex md:shrink-0" src="assets/images/logo.jpg" alt=""></a>
+                <!--logo end-->
 
-                <!--toggler button-->
+                <!--toggler button start-->
                 <button class="md:hidden inline-flex items-center justify-center border h-10 w-10 ml-auto rounded-md outline-none focus:outline-none"
                     @click="navbarOpen = !navbarOpen">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>  
                 </button>
-                <!--toggler button-->
+                <!--toggler button end-->
             </div>
             
 
-            <!--menu-->
+            <!--menu start-->
             <div class="w-full md:inline-flex md:w-auto mt-2 mt:mt-0" :class="{'hidden':!navbarOpen, 'flex':navbarOpen}">
                 <ul class="w-full lg:w-auto flex flex-col md:items-center md:flex-row">
                     <li>
-                        <a href="#" class="flex px-4 py-2 rounded-md text-blue-600">Home</a>
+                        <a href="index.html" class="flex px-4 py-2 rounded-md text-blue-600">Home</a>
                     </li>
-
-                    <!--dropdown-->
+                    <!--dropdown about start-->
                     <li class="relative" x-data="{dropdownOpen:false}">
                         <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md hover:text-blue-400"
                         @click="dropdownOpen = !dropdownOpen"
                         >About</button>
-                        <!--dropdown menu-->
+                        <!--dropdown menu start-->
                         <div class="md:absolute bg-white md:bg-blue-50 right-0 rounded-md p-2" :class="{'hidden':!dropdownOpen, 'flex flex-col':dropdownOpen}">
                             <ul class="space-y-2">
                                 <li>
@@ -65,30 +66,65 @@
                                 </li>    
                             </ul>
                         </div>
-                        <!--dropdown menu-->
+                        <!--dropdown menu end-->
                     </li>
-                    <!--dropdown-->
-
-
-
-                    <li>
-                        <a href="#" class="flex px-4 py-2 rounded-md hover:text-blue-400">Members</a>
+                    <!--dropdown about end-->
+                    <!--dropdown members start-->
+                    <li class="relative" x-data="{dropdownOpen:false}">
+                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md hover:text-blue-400"
+                        @click="dropdownOpen = !dropdownOpen"
+                        >Members</button>
+                        <!--dropdown menu start-->
+                        <div class="md:absolute bg-white md:bg-blue-50 right-0 rounded-md p-2" :class="{'hidden':!dropdownOpen, 'flex flex-col':dropdownOpen}">
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Member Directory</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Membership Application</a>
+                                </li>  
+                            </ul>
+                        </div>
+                        <!--dropdown menu end-->
                     </li>
+                    <!--dropdown members end-->
                     <li>
                         <a href="#" class="flex px-4 py-2 rounded-md hover:text-blue-400">Gallery</a>
                     </li>
-                    <li>
-                        <a href="#" class="flex px-4 py-2 rounded-md hover:text-blue-400">Activities</a>
+                    <!--dropdown activities start-->
+                    <li class="relative" x-data="{dropdownOpen:false}">
+                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md hover:text-blue-400"
+                        @click="dropdownOpen = !dropdownOpen"
+                        >Activities</button>
+                        <!--dropdown menu start-->
+                        <div class="md:absolute bg-white md:bg-blue-50 right-0 rounded-md p-2" :class="{'hidden':!dropdownOpen, 'flex flex-col':dropdownOpen}">
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Events</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Universities Abroad</a>
+                                </li> 
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Calendar</a>
+                                </li>  
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Useful Links</a>
+                                </li>   
+                            </ul>
+                        </div>
+                        <!--dropdown menu end-->
                     </li>
+                    <!--dropdown activities end-->
                     <li>
                         <button href="#" class="flex px-4 py-2 rounded-md md:text-white md:bg-red-800 md:hover:bg-red-600 md:hover:text-white">Contact Us</button>
                     </li>
                 </ul>
             </div>
-            <!--menu-->
+            <!--menu end-->
 
         </div>
-        <!--container-->
+        <!--container end-->
     </nav>
 
 
