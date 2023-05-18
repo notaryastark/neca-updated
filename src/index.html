@@ -8,7 +8,6 @@
   <link href="/dist/output.css" rel="stylesheet">
   
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous"/> -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.0/tailwind.min.css" integrity="sha256-CAI/7ThhltsmP2L2zKBYa7FknB3ZwFbD0nqL8FCdxdc=" crossorigin="anonymous"/> -->
 
@@ -17,7 +16,7 @@
 <!--aligning body center-->
 <body class="bg-slate-50">
     <nav class="bg-white" x-data="{navbarOpen:false}">
-        <!--container start-->
+        <!--container nav start-->
         <div class="container md:flex flex-wrap items-center justify-between mx-auto py-2">
             <div class="flex sm:flex sm:justify-between items-center">
                 <!--logo start-->
@@ -124,7 +123,90 @@
             <!--menu end-->
 
         </div>
-        <!--container end-->
+        <!--container nav end-->
+
+        <!--body slate start-->
+        <div class="main-body bg-slate-100">
+            <!--hero start-->
+            <div class="container py-6 lg:py-24 md:py-10 flex flex-col-reverse lg:flex-row items-center gap-6 lg:gap-14 md:gap-8">
+                <div class=" flex flex-col items-start gap-3 lg:gap-10 md:gap-6">
+                    <div class="flex flex-col justify-between gap-2 md:gap-4">  
+                        <h1 class="text-2xl lg:text-6xl md:text-4xl">Achieving Your Educational Dreams</h1>
+                        <span>Full-service agency dedicated to providing personalized guidance, expert assistance and comprehensive support for all aspects of your abroad education journey</span>
+                    </div>
+                    <button class="btn btn-red">Learn More</button>
+                </div>
+                <div>
+                    <img src="assets/images/Photo.png" alt="">
+                </div>
+            </div>
+            <!--hero end-->
+
+            <!--message from president start-->
+            <div class="container">
+                <div class="flex flex-row bg-blue-950 items-center gap-10 py-20 px-10">
+                    <div>
+                        <img src="assets/images/president.png" alt="">
+                    </div>
+                    <div>
+                        <div>
+                            <h2 class="text-2xl lg:text-6xl md:text-4xl text-white">Message From the President</h2>
+                            <p>NECA, in a very short span of its struggle tenure, has been succeeding in gaining a better reputation for the quality educational services that are provided by its members. NECA members are dedicated to providing quality service for students and their guardians in the first place.</p>
+                        </div>
+                        <div>
+                            <p>Santosh Pyakurel</p>
+                            <p>President, NECA</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <!--message from president end-->  
+        </div>
+        <!--body slate end-->
+
+
+        
+
+        <!-- <div class="main-body bg-slate-100">
+            <div class="hero container p-0">
+                <div class="flex flex-row items-center ">
+                    <div class="flex flex-col items-start">
+                        <div class="">
+                            <h2 class="text-6xl">Achieving Your Educational Dreams</h2>
+                            <p>Full-service agency dedicated to providing personalized guidance, expert assistance and comprehensive support for all aspects of your abroad education journey</p>
+                        </div>
+                        <button class="btn btn-red">Learn More
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>                  
+                        </button>
+                    </div>
+                    <div class="flex">
+                        <img src="assets/images/Photo.png" alt="">
+                    </div>
+                </div>
+            </div>   
+            
+            <div class="container bg-blue-950">
+                <div class="flex items-center gap-10 py-24">
+                    <div class="flex">
+                        <img src="assets/images/president.png" alt="">
+                    </div>
+                    <div class="flex-columnv text-white">
+                        <div class="flex-column">
+                            <h2 class="text-6xl text-white">Message From the President</h2>
+                            <p>NECA, in a very short span of its struggle tenure, has been succeeding in gaining a better reputation for the quality educational services that are provided by its members. NECA members are dedicated to providing quality service for students and their guardians in the first place.</p>
+                        </div>
+                        <div class="flex-column">
+                            <p>Santosh Pyakurel</p>
+                            <p>President, NECA</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>  
+        </div> -->
+
     </nav>
 
 
