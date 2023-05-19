@@ -6,9 +6,10 @@ module.exports = {
       center: true,
       padding: '2rem',
     },
-
-    fontFamily: {
-      'sans': ['Proxima Nova', ...defaultTheme.fontFamily.sans],
+    extend: {
+      fontFamily: {
+        jakarta: "'Plus Jakarta Sans', sans-serif",
+      }
     }
   },
   plugins: [],
