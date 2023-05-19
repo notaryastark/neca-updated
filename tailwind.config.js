@@ -5,6 +5,10 @@ module.exports = {
     container: {
       center: true,
       padding: '2rem',
+    },
+
+    fontFamily: {
+      'sans': ['Proxima Nova', ...defaultTheme.fontFamily.sans],
     }
   },
   plugins: [],

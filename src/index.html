@@ -22,7 +22,7 @@
                 <!--logo start-->
                 <a href="index.html"><img class="h-24 inline-flex md:shrink-0" src="assets/images/logo.jpg" alt=""></a>
                 <!--logo end-->
-
+    
                 <!--toggler button start-->
                 <button class="md:hidden inline-flex items-center justify-center border h-10 w-10 ml-auto rounded-md outline-none focus:outline-none"
                     @click="navbarOpen = !navbarOpen">
@@ -33,7 +33,7 @@
                 <!--toggler button end-->
             </div>
             
-
+    
             <!--menu start-->
             <div class="w-full md:inline-flex md:w-auto mt-2 mt:mt-0" :class="{'hidden':!navbarOpen, 'flex':navbarOpen}">
                 <ul class="w-full lg:w-auto flex flex-col md:items-center md:flex-row">
@@ -121,46 +121,215 @@
                 </ul>
             </div>
             <!--menu end-->
-
+    
         </div>
         <!--container nav end-->
-
-        <!--body slate start-->
-        <div class="main-body bg-slate-100">
-            <!--hero start-->
-            <div class="container py-6 lg:py-24 md:py-10 flex flex-col-reverse lg:flex-row items-center gap-6 lg:gap-14 md:gap-8">
-                <div class=" flex flex-col items-start gap-3 lg:gap-10 md:gap-6">
-                    <div class="flex flex-col justify-between gap-2 md:gap-4">  
-                        <h1 class="text-2xl lg:text-6xl md:text-4xl">Achieving Your Educational Dreams</h1>
-                        <span>Full-service agency dedicated to providing personalized guidance, expert assistance and comprehensive support for all aspects of your abroad education journey</span>
-                    </div>
-                    <button class="btn btn-red">Learn More</button>
+    </nav>
+    
+    <!--body slate start-->
+    <div class="main-body bg-slate-100">
+        <!--hero section start-->
+        <div class="container py-6 lg:py-24 md:py-10 flex flex-col-reverse lg:flex-row items-center gap-6 lg:gap-14 md:gap-8">
+            <div class=" flex flex-col items-start gap-3 lg:gap-10 md:gap-6">
+                <div class="flex flex-col justify-between gap-2 md:gap-4">  
+                    <h1 class="text-2xl lg:text-6xl md:text-4xl">Achieving Your Educational Dreams</h1>
+                    <span>Full-service agency dedicated to providing personalized guidance, expert assistance and comprehensive support for all aspects of your abroad education journey</span>
                 </div>
-                <div>
-                    <img src="assets/images/Photo.png" alt="">
-                </div>
+                <button class="btn btn-red">Learn More</button>
             </div>
-            <!--hero end-->
-
-            <!--message from president start-->
-            <div class="container">
-                <div class="flex flex-col md:flex-row bg-blue-950 items-center gap-10 py-6 lg:py-20 md:py-16 px-4 lg:px-10 md:px-6">
-                    <img class="lg:h-60 md:h-40" src="assets/images/president.png" alt="">
-                    <div class="flex flex-col text-white gap-4 lg:gap-8 md:gap-6">
-                        <div class="flex flex-col gap-2 lg:gap-6 md:gap-4">
-                            <h2 class="flex flex-col text-2xl lg:text-6xl md:text-4xl">Message From the President</h2>
-                            <p>NECA, in a very short span of its struggle tenure, has been succeeding in gaining a better reputation for the quality educational services that are provided by its members. NECA members are dedicated to providing quality service for students and their guardians in the first place.</p>
-                        </div>
-                        <div>
-                            <p>Santosh Pyakurel</p>
-                            <p>President, NECA</p>
-                        </div>
-                    </div> 
-                </div>
+            <div>
+                <img src="assets/images/Photo.png" alt="">
             </div>
-            <!--message from president end-->  
         </div>
-        <!--body slate end-->
+        <!--hero section end-->
+
+        <!--message from president start-->
+        <div class="container">
+            <div class="flex flex-col md:flex-row bg-blue-950 items-center gap-10 py-6 lg:py-20 md:py-16 px-4 lg:px-10 md:px-6">
+                <img class="lg:h-60 md:h-40" src="assets/images/president.png" alt="">
+                <div class="flex flex-col text-white gap-4 lg:gap-8 md:gap-6">
+                    <div class="flex flex-col gap-2 lg:gap-6 md:gap-4">
+                        <h2 class="flex flex-col text-2xl lg:text-6xl md:text-4xl">Message From the President</h2>
+                        <p>NECA, in a very short span of its struggle tenure, has been succeeding in gaining a better reputation for the quality educational services that are provided by its members. NECA members are dedicated to providing quality service for students and their guardians in the first place.</p>
+                    </div>
+                    <div>
+                        <p>Santosh Pyakurel</p>
+                        <p>President, NECA</p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <!--message from president end-->  
+
+        <!--about us start-->
+        <div class="container py-6 lg:py-24 md:py-10 flex flex-col-reverse lg:flex-row items-center gap-6 lg:gap-14 md:gap-8">
+            <div class=" flex flex-col items-start gap-3 lg:gap-10 md:gap-6">
+                <div class="flex flex-col justify-between gap-2 md:gap-4">  
+                    <h1 class="text-gray-800 font-semibold text-2xl lg:text-4xl md:text-4xl">About Us</h1>
+                    <span>National Educational Consultancy Association (NECA) is a non-political, non-commercial and non-profit organization, which coordinates different segments of the education industry. It is recognized as the main representative body of educational consultants and counsellors, which offers reliable, professional service.</span>
+                </div>
+                <button class="btn btn-red">Read More</button>
+            </div>
+            <div>
+                <img class="" src="assets/images/about-img.png" alt="">
+            </div>
+        </div>
+        <!--about us end-->
+
+
+        <!--objective start-->
+        <div class="container py-6 lg:py-24 md:py-10 flex flex-col lg:flex-row items-center gap-6 lg:gap-14 md:gap-8">
+            <div class="flex flex-col lg:flex-row gap-5">
+                <!--card1 start-->
+                <div class="card bg-white flex flex-col gap-4 px-10 py-9">
+                    <div class="flex flex-col items-center lg:gap-4">
+                        <img src="assets/images/Join.png" alt="">
+                        <span class="font-semibold">Join Us</span>
+                    </div>
+                    <div class="flex flex-col items-center lg:gap-6">
+                        <span>To be a NECA member, you are required to fill out and submit the membership application form along with your AN and company registration certificate to the office </span>
+                        <button class="font-medium text-blue-800">Read More  </button>
+                    </div>
+                </div>
+                <!--card1 end-->
+
+                <!--card2 start-->
+                <div class="card bg-white flex flex-col gap-4 px-10 py-9">
+                    <div class="flex flex-col items-center lg:gap-4">
+                        <img src="assets/images/Member.png" alt="">
+                        <span class="font-semibold">Members</span>
+                    </div>
+                    <div class="flex flex-col items-center lg:gap-6">
+                        <span>Before membership is offered, NECA executive committee members visit you in person to explore the way your consultancy deals in abroad study.</span>
+                        <button class="font-medium text-blue-800">Read More  </button>
+                    </div>
+                </div>
+                <!--card2 end-->
+
+                <!--card3 start-->
+                <div class="card bg-white flex flex-col gap-4 px-10 py-9">
+                    <div class="flex flex-col items-center lg:gap-4">
+                        <img src="assets/images/Objective.png" alt="">
+                        <span class="font-semibold">Objectives</span>
+                    </div>
+                    <div class="flex flex-col items-center lg:gap-6">
+                        <span>To protect the rights and interests of all educational consultancies throughout the country. To make educational consulting profession a noble profession.</span>
+                        <button class="font-medium text-blue-800">Read More  </button>
+                    </div>
+                </div>
+                <!--card3 end-->
+            </div>
+        </div>
+        <!--objective end-->
+        
+
+        <!--events gallery start-->
+        <div class="container py-6 lg:py-24 md:py-10 flex flex-col lg:flex-row items-center gap-6 lg:gap-14 md:gap-8">
+            <div class="flex flex-col lg:grid grid-cols-3 grid-rows-2 justify-between lg:flex-row gap-5">
+                <!--event1 start-->
+                <div class=" flex flex-col gap-4">
+                    <img class="" src="assets/images/g9.jpg" alt="">
+                    <div class="flex flex-col lg:gap-1">
+                        <span class="font-bold text-blue-800">NECA Event 2023</span>
+                        <span class="text-gray-800">125 images</span>
+                    </div>
+                </div>
+                <!--event1 end-->
+
+                <!--event2 start-->
+                <div class=" flex flex-col gap-4">
+                    <img class="" src="assets/images/g20.jpg" alt="">
+                    <div class="flex flex-col lg:gap-1">
+                        <span class="font-bold text-blue-800">NECA Event 2023</span>
+                        <span class="text-gray-800">125 images</span>
+                    </div>
+                </div>
+                <!--event2 end-->
+
+                <!--event3 start-->
+                <div class=" flex flex-col gap-4">
+                    <img class="" src="assets/images/g23.jpg" alt="">
+                    <div class="flex flex-col lg:gap-1">
+                        <span class="font-bold text-blue-800">NECA Event 2023</span>
+                        <span class="text-gray-800">125 images</span>
+                    </div>
+                </div>
+                <!--event3 end-->
+
+                <!--event4 start-->
+                <div class=" flex flex-col gap-4">
+                    <img class="" src="assets/images/g7.jpg" alt="">
+                    <div class="flex flex-col lg:gap-1">
+                        <span class="font-bold text-blue-800">NECA Event 2023</span>
+                        <span class="text-gray-800">125 images</span>
+                    </div>
+                </div>
+                <!--event4 end-->
+
+                <!--event5 start-->
+                <div class=" flex flex-col gap-4">
+                    <img class="" src="assets/images/g15.jpg" alt="">
+                    <div class="flex flex-col lg:gap-1">
+                        <span class="font-bold text-blue-800">NECA Event 2023</span>
+                        <span class="text-gray-800">125 images</span>
+                    </div>
+                </div>
+                <!--event5 end-->
+
+                <!--event6 start-->
+                <div class=" flex flex-col gap-4">
+                    <img class="" src="assets/images/about.jpg" alt="">
+                    <div class="flex flex-col lg:gap-1">
+                        <span class="font-bold text-blue-800">NECA Event 2023</span>
+                        <span class="text-gray-800">125 images</span>
+                    </div>
+                </div>
+                <!--event6 end-->
+            </div>
+        </div>
+        <!--events gallery end-->
+
+        <!--latest news start-->
+        <div class="container py-6 lg:py-24 md:py-10 flex flex-col lg:flex-row items-center gap-6 lg:gap-14 md:gap-8">
+            <div class="flex flex-col lg:grid grid-cols-3 grid-rows-1 justify-between lg:flex-row gap-5">
+                <!--event1 start-->
+                <div class=" flex flex-col gap-4 bg-white px-4 py-4">
+                    <img class="" src="assets/images/g9.jpg" alt="">
+                    <div class="flex flex-col lg:gap-1">
+                        <span class="text-gray-800">8  minute read</span>
+                        <span class="font-bold text-gray-800">UK Immigration Rule changes effecting Tier 1 and 2.</span>
+                    </div>
+                </div>
+                <!--event1 end-->
+
+                <!--event2 start-->
+                <div class=" flex flex-col gap-4 bg-white px-4 py-4">
+                    <img class="" src="assets/images/g20.jpg" alt="">
+                    <div class="flex flex-col lg:gap-1">
+                        <span class="text-gray-800">8  minute read</span>
+                        <span class="font-bold text-gray-800">UK Immigration Rule changes effecting Tier 1 and 2.</span>
+                    </div>
+                </div>
+                <!--event2 end-->
+
+                <!--event3 start-->
+                <div class=" flex flex-col gap-4 bg-white px-4 py-4">
+                    <img class="" src="assets/images/g23.jpg" alt="">
+                    <div class="flex flex-col lg:gap-1">
+                        <span class="text-gray-800">8  minute read</span>
+                        <span class="font-bold text-gray-800">UK Immigration Rule changes effecting Tier 1 and 2.</span>
+                    </div>
+                </div>
+                <!--event3 end-->
+            </div>
+        </div>
+        <!--latest news end-->
+        
+        
+
+
+    </div>
+    <!--body slate end-->
 
 
         
@@ -204,8 +373,6 @@
                 </div>
             </div>  
         </div> -->
-
-    </nav>
 
 
 
