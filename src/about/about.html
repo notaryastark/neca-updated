@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neca Website</title>
+
+  <link href="/dist/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous"/> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.0/tailwind.min.css" integrity="sha256-CAI/7ThhltsmP2L2zKBYa7FknB3ZwFbD0nqL8FCdxdc=" crossorigin="anonymous"/> -->
+
+</head>
+
+<!--aligning body center-->
+<body class="bg-slate-50 font-jakarta">
+    <!--nav start-->
+    <nav class="bg-white" x-data="{navbarOpen:false}">
+        <!--container nav start-->
+        <div class="container md:flex flex-wrap items-center justify-between mx-auto py-2">
+            <div class="flex sm:flex sm:justify-between items-center">
+                <!--logo start-->
+                <a href="index.html"><img class="h-24 inline-flex md:shrink-0" src="../assets/images/logo.jpg" alt=""></a>
+                <!--logo end-->
+    
+                <!--toggler button start-->
+                <button class="md:hidden inline-flex items-center justify-center border h-10 w-10 ml-auto rounded-md outline-none focus:outline-none"
+                    @click="navbarOpen = !navbarOpen">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>  
+                </button>
+                <!--toggler button end-->
+            </div>
+            
+    
+            <!--menu start-->
+            <div class="w-full md:inline-flex md:w-auto mt-2 mt:mt-0" :class="{'hidden':!navbarOpen, 'flex':navbarOpen}">
+                <ul class="w-full lg:w-auto flex flex-col md:items-center md:flex-row">
+                    <li>
+                        <a href="index.html" class="flex px-4 py-2 rounded-md">Home</a>
+                    </li>
+                    <!--dropdown about start-->
+                    <li class="relative" x-data="{dropdownOpen:false}">
+                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md text-blue-600 hover:text-blue-400"
+                        @click="dropdownOpen = !dropdownOpen"
+                        >About</button>
+                        <!--dropdown menu start-->
+                        <div class="md:absolute bg-white md:bg-blue-50 right-0 rounded-md p-2" :class="{'hidden':!dropdownOpen, 'flex flex-col':dropdownOpen}">
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Mission and Vision</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Aims and Objectives</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Message From President</a>
+                                </li> 
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Executive Board</a>
+                                </li>    
+                            </ul>
+                        </div>
+                        <!--dropdown menu end-->
+                    </li>
+                    <!--dropdown about end-->
+                    <!--dropdown members start-->
+                    <li class="relative" x-data="{dropdownOpen:false}">
+                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md hover:text-blue-400"
+                        @click="dropdownOpen = !dropdownOpen"
+                        >Members</button>
+                        <!--dropdown menu start-->
+                        <div class="md:absolute bg-white md:bg-blue-50 right-0 rounded-md p-2" :class="{'hidden':!dropdownOpen, 'flex flex-col':dropdownOpen}">
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Member Directory</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Membership Application</a>
+                                </li>  
+                            </ul>
+                        </div>
+                        <!--dropdown menu end-->
+                    </li>
+                    <!--dropdown members end-->
+                    <li>
+                        <a href="#" class="flex px-4 py-2 rounded-md hover:text-blue-400">Gallery</a>
+                    </li>
+                    <!--dropdown activities start-->
+                    <li class="relative" x-data="{dropdownOpen:false}">
+                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md hover:text-blue-400"
+                        @click="dropdownOpen = !dropdownOpen"
+                        >Activities</button>
+                        <!--dropdown menu start-->
+                        <div class="md:absolute bg-white md:bg-blue-50 right-0 rounded-md p-2" :class="{'hidden':!dropdownOpen, 'flex flex-col':dropdownOpen}">
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Events</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Universities Abroad</a>
+                                </li> 
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Calendar</a>
+                                </li>  
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Useful Links</a>
+                                </li>   
+                            </ul>
+                        </div>
+                        <!--dropdown menu end-->
+                    </li>
+                    <!--dropdown activities end-->
+                    <li>
+                        <button href="#" class="flex px-4 py-2 rounded-md md:text-white md:bg-red-800 md:hover:bg-red-600 md:hover:text-white">Contact Us</button>
+                    </li>
+                </ul>
+            </div>
+            <!--menu end-->
+    
+        </div>
+        <!--container nav end-->
+    </nav>
+    <!--nav end-->
+    
+    <!--body slate start-->
+    <div class="main-body">
+        <!--image section start-->
+        <img src="../assets/images/AboutUs-img.png" alt="">
+        <!--image section end-->
+
+        <div class="container flex flex-col gap-2 md:gap-3 lg:gap-4 py-4 md:py-10 lg:py-12">
+            <h1 class="font-bold text-gray-800">What is NECA?</h1>
+            <span>National Educational Consultancy Association (NECA) is a non-political, non-commercial and non-profit organization, which coordinates different segments of the education industry. It is recognized as the main representative body of educational consultants and counsellors, which offers reliable, professional service.</span>
+        </div>
+
+        <div class="container flex flex-col gap-6 md:gap-7 lg:gap-8 pb-12 md:pb-16 lg:pb-24">
+            <div class="flex flex-col gap-2 md:gap-3 lg:gap-4">
+                <h1 class="font-bold text-gray-800">History</h1>
+                <span>The establishment of NECA was to develop, foster and safeguard the abroad study consultation services. Had NECA not formed, Nepal as a nation would be vulnerable to external forces in international education. Nepal was exposed to international education after the end of an autocratic Rana Regime. The trend took its hype when Nepal entered into the system of democracy in the year 1994. NECA was not present then, but some professionals in the office of abroad study services were witnessing the scene. These professionals soon realized for unity and therefore gathered in a table giving birth to NECA in 1997. Since its establishment, NECA has been playing a significant role in facilitating students to gain access to international education. NECA’s such role changes as the pace of time. In 1997, it was just about clustering like-minded people at a table. In the millennium (2000), it was to revitalize all its members with the feel of cooperation, less the competition. After four years in 2004, it was to have varieties and for exploration of study options, identifying the key destination countries for students towards their further study options.</span>
+            </div>
+            <img src="../assets/images/about-us.png" alt="">
+            <div class="flex flex-col gap-2 md:gap-3 lg:gap-4">
+                <span>NECA was much matured when it arrived in 2007, and envisioned to have a role to provide proper information, guidance and counseling to students and parents. Just admission counseling was a trend in the past, and in 2009, NECA stepped ahead with a mission to equip every member, students and parents with an updated information on almost everything—policies and requirement, courses and the destination, places and the people. At the same time, NECA, with its 2nd series of Education Fair on the go, received a number of complaints by emails from the students that boarded plane to foreign land for their further studies. This was an intriguing role for NECA to monitor issues around and solve the problems therein, and at the same time collaborate with the government to tackle such issues and address as relevant. NECA faced numerous such occurrences in the past and succeeded in resolving almost every single of them by rewarding justice to the victims and penalizing the malefactors.</span>
+                <span>NECA now is not made up of groups as it was in 1997, but an organization of an elite community and elite members whereby everyone feels equally responsible to the community they live in. As an organization of elite, and for everyone, NECA now boasts everything from hosting the compliance office of discipline to international liaison committee, from the monitoring department to the national coordination team. With such composition of organization, NECA ensures the current practice within the established code of conduct and maintains abroad study service within its scope. NECA from its inception values its responsibility towards the society, and therefore hosts a number of scholarships on timely manner to Nepali citizens from the indigenous background.</span>
+            </div>
+        </div>
+
+        <!--footer start-->
+        <footer>
+            <!--footer section start-->
+            <div class="bg-slate-800">
+                <div class="links container py-4">
+
+                    <!--desktop view start-->
+                    <div class="grid lg:grid-cols-5 md:grid-cols-2 sm:justify-center lg:py-12 md:py-8">
+                        <div class="flex flex-col mb-5 gap-4">
+                            <h4 class="text-slate-400">ABOUT</h4>
+                            <ul class=" flex flex-col text-gray-200">
+                                <a href="#" class="hover:text-red-500">About Us</a>
+                                <a href="#" class="hover:text-red-500">Mission and Vision</a>
+                                <a href="#" class="hover:text-red-500">Aims and Objectives</a>
+                                <a href="#" class="hover:text-red-500">Message From President</a>
+                                <a href="#" class="hover:text-red-500">Executive Board</a>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col mb-5 gap-4">
+                            <h4 class="text-slate-400">MEMBERS</h4>
+                            <ul class=" flex flex-col text-gray-200">
+                                <a href="#" class="hover:text-red-500">Member Directory</a>
+                                <a href="#" class="hover:text-red-500">Membership Application</a>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col mb-5 gap-4">
+                            <h4 class="text-slate-400">GALLERY</h4>
+                        </div>
+                        <div class="flex flex-col mb-5 gap-4">
+                            <h4 class="text-slate-400">ACTIVITIES</h4>
+                            <ul class=" flex flex-col text-gray-200">
+                                <a href="#" class="hover:text-red-500">Events</a>
+                                <a href="#" class="hover:text-red-500">Universities Abroad</a>
+                                <a href="#" class="hover:text-red-500">Calendar</a>
+                                <a href="#" class="hover:text-red-500">Useful Links</a>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col mb-5 gap-4">
+                            <h4 class="text-slate-400">SIGN UP FOR OUR NEWSLETTER</h4>
+                            <span class="text-gray-200">Sign up to our mailing list and get update to our latest news and notices</span>
+                            <form class="flex flex-row">
+                                <input class="p-2" type="text" name="" id="" placeholder="Enter email address">
+                                <button class="bg-red-700 text-white px-4 py-2 rounded-sm">Sign Up</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!--desktop view end-->
+
+                    <!--laptop mobile view start-->
+                    <!-- <div class="lg:hidden">
+                        <div class="grid grid-cols-1 md:grid-cols-2 sm:justify-center py-4 md:py-8">
+                            <div class="flex flex-col mb-5 gap-4">
+                                <h4 class="text-slate-400">ABOUT</h4>
+                                <ul class=" flex flex-col text-gray-200">
+                                    <a href="#" class="hover:text-red-500">About Us</a>
+                                    <a href="#" class="hover:text-red-500">Mission and Vision</a>
+                                    <a href="#" class="hover:text-red-500">Aims and Objectives</a>
+                                    <a href="#" class="hover:text-red-500">Message From President</a>
+                                    <a href="#" class="hover:text-red-500">Executive Board</a>
+                                </ul>
+                            </div>
+                            <div class="flex flex-col mb-5 gap-4">
+                                <h4 class="text-slate-400">MEMBERS</h4>
+                                <ul class=" flex flex-col text-gray-200">
+                                    <a href="#" class="hover:text-red-500">Member Directory</a>
+                                    <a href="#" class="hover:text-red-500">Membership Application</a>
+                                </ul>
+                            </div>
+                            <div class="flex flex-col mb-5 gap-4">
+                                <h4 class="text-slate-400">GALLERY</h4>
+                            </div>
+                            <div class="flex flex-col mb-5 gap-4">
+                                <h4 class="text-slate-400">ACTIVITIES</h4>
+                                <ul class=" flex flex-col text-gray-200">
+                                    <a href="#" class="hover:text-red-500">Events</a>
+                                    <a href="#" class="hover:text-red-500">Universities Abroad</a>
+                                    <a href="#" class="hover:text-red-500">Calendar</a>
+                                    <a href="#" class="hover:text-red-500">Useful Links</a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex flex-col mb-5 gap-4">
+                            <h4 class="text-slate-400">SIGN UP FOR OUR NEWSLETTER</h4>
+                            <span class="text-gray-200">Sign up to our mailing list and get update to our latest news and notices</span>
+                            <form class="flex flex-row">
+                                <input class="p-2" type="text" name="" id="" placeholder="Enter email address">
+                                <button class="bg-red-700 text-white px-4 py-2 rounded-sm">Sign Up</button>
+                            </form>
+                        </div>
+                    </div> -->
+                    <!--laptop mobile view start-->
+
+                </div>
+            </div>
+            <!--footer section end-->
+            
+            <!--copyright section start-->
+            <div class="copyright bg-slate-900 px-8 py-3">
+                <span class="flex flex-row items-center justify-center text-white">© 2023. National Education Consultancy Association. All rights reserved.</span>
+            </div>
+            <!--copyright section end-->
+
+        </footer>
+        <!--footer end-->
+
+    </div>
+    <!--body slate end-->
+
+    <script type="module" src="../script.js"></script>
+</body>
+</html>
