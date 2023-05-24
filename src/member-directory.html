@@ -46,9 +46,8 @@
                     </li>
                     <!--dropdown about start-->
                     <li class="relative" x-data="{dropdownOpen:false}">
-                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md text-blue-600 hover:text-blue-400"
-                        @click="dropdownOpen = !dropdownOpen"
-                        >About</button>
+                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md hover:text-blue-400"
+                        @click="dropdownOpen = !dropdownOpen">About</button>
                         <!--dropdown menu start-->
                         <div class="md:absolute bg-white md:bg-blue-50 right-0 rounded-md p-2" :class="{'hidden':!dropdownOpen, 'flex flex-col':dropdownOpen}">
                             <ul class="space-y-2">
@@ -74,9 +73,8 @@
                     <!--dropdown about end-->
                     <!--dropdown members start-->
                     <li class="relative" x-data="{dropdownOpen:false}">
-                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md hover:text-blue-400"
-                        @click="dropdownOpen = !dropdownOpen"
-                        >Members</button>
+                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md text-blue-600 hover:text-blue-400"
+                        @click="dropdownOpen = !dropdownOpen">Members</button>
                         <!--dropdown menu start-->
                         <div class="md:absolute bg-white md:bg-blue-50 right-0 rounded-md p-2" :class="{'hidden':!dropdownOpen, 'flex flex-col':dropdownOpen}">
                             <ul class="space-y-2">
@@ -97,8 +95,7 @@
                     <!--dropdown activities start-->
                     <li class="relative" x-data="{dropdownOpen:false}">
                         <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md hover:text-blue-400"
-                        @click="dropdownOpen = !dropdownOpen"
-                        >Activities</button>
+                        @click="dropdownOpen = !dropdownOpen">Activities</button>
                         <!--dropdown menu start-->
                         <div class="md:absolute bg-white md:bg-blue-50 right-0 rounded-md p-2" :class="{'hidden':!dropdownOpen, 'flex flex-col':dropdownOpen}">
                             <ul class="space-y-2">
