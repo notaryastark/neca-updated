@@ -9,6 +9,9 @@ module.exports = {
     extend: {
       fontFamily: {
         jakarta: "'Plus Jakarta Sans', sans-serif",
+      },
+      height: {
+        '128' : '35rem'
       }
     }
   },
