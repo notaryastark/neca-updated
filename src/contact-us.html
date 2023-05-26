@@ -137,81 +137,83 @@
         </div>
         <!--image section end-->
 
-        <div class="container w-full flex flex-col md:flex-row justify-between py-8 md:py-10 lg:py-14">
+        <div class="container w-full flex flex-col justify-between align-middle py-8 md:py-10 lg:py-14">
+
+            <div class="flex flex-col gap-4">
+                <h2 class="text-3xl font-bold">Get in Touch</h2>
+                <p class="text-gray-600">You can talk to our online representative at any time. Please fill up below instant messaging programs.</p>
+            </div>
 
             <!--contact form start-->
-            <div class="form">
-                <div class="flex flex-col gap-4">
-                    <h2 class="text-3xl font-bold">Get in Touch</h2>
-                    <p class="text-gray-600">You can talk to our online representative at any time. Please fill up below instant messaging programs.</p>
+            <div class="w-full flex flex-col md:flex-row justify-between">
+                <div>
+                    <form class="flex flex-col w-full pb-6 gap-4">
+                        <label for="full-name">Full Name</label>
+                        <div class="flex flex-col md:flex-row gap-5">
+                            <input type="text" class="px-4 py-4" id="first-name" placeholder="First Name">
+                            <input type="text" class="px-4 py-4" id="last-name" placeholder="Last Name">
+                        </div>
+    
+                        <label for="contact-number">Contact Number</label>
+                        <input type="text" class="px-4 py-4" id="contact-number" placeholder="977-9841234567">
+    
+                        <label for="email">Email ID</label>
+                        <input type="email" class="px-4 py-4" id="email" placeholder="example@example.com">
+    
+                        <label for="message">Message</label>
+                        <textarea id="message" class="px-4 py-4" cols="30" rows="10" placeholder="Enter your message here"></textarea>
+                    </form>
+    
+                    <button type="submit" id="register" class="text-base lg:text-lg w-full bg-blue-900 text-white py-2 md:py-3 lg:py-4">REGISTER</button>
                 </div>
 
-                <form class="flex flex-col w-full pb-6 gap-4">
-                    <label for="full-name">Full Name</label>
-                    <div class="flex flex-col md:flex-row gap-5">
-                        <input type="text" class="px-4" id="first-name" placeholder="First Name">
-                        <input type="text" id="last-name" placeholder="Last Name">
+                <!--contact information start-->
+                <div class="contact-info flex flex-col gap-10 px-7 py-12">
+                    <div class="flex flex-col gap-6">
+                        <p class="font-semibold text-gray-800">Contact Information</p>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex flex-row gap-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#02347B" class="w-6 h-6">
+                                    <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd" />
+                                </svg>                                               
+                                <p class="text-gray-700">014265500</p>
+                            </div>
+                            <div class="flex flex-row gap-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#02347B" class="w-6 h-6">
+                                    <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                                    <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                                </svg>                                               
+                                <p class="text-gray-700">info@neca.org.np</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <label for="contact-number">Contact Number</label>
-                    <input type="text" id="contact-number" placeholder="977-9841234567">
+                    <div class="flex flex-col gap-6">
+                        <p class="font-semibold text-gray-800">Working Hours</p>
+                        <div class="flex flex-row gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#02347B" class="w-6 h-6">
+                                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+                            </svg>                          
+                            <div class="flex flex-col gap-4">
+                                <p class="text-gray-700">7AM to 5:30PM Monday to Friday</p>
+                                <p class="text-gray-700">8AM to 4PM Saturday</p>
+                            </div>
+                        </div>
+                    </div>
 
-                    <label for="email">Email ID</label>
-                    <input type="email" id="email" placeholder="example@example.com">
-
-                    <label for="message">Message</label>
-                    <textarea id="" cols="30" rows="10" placeholder="Enter your message here"></textarea>
-                </form>
-
-                <button type="submit" id="register" class="text-base lg:text-lg w-full bg-blue-900 text-white py-2 md:py-3 lg:py-4">REGISTER</button>
+                    <div class="flex flex-col gap-6">
+                        <p class="font-semibold text-gray-800">Office Location</p>
+                        <div class="flex flex-row gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#02347B" class="w-6 h-6">
+                                <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                            </svg>                                                                
+                            <p class="text-gray-700">Bagbazar, Kathmandu Nepal</p>
+                        </div>
+                    </div>
+                </div>
+                <!--contact information end-->
             </div>
             <!--contact form end-->
-
-            <!--contact information start-->
-            <div class="contact-info flex flex-col gap-10 px-7 py-12">
-                <div class="flex flex-col gap-6">
-                    <p class="font-semibold text-gray-800">Contact Information</p>
-                    <div class="flex flex-col gap-4">
-                        <div class="flex flex-row gap-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#02347B" class="w-6 h-6">
-                                <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd" />
-                            </svg>                                               
-                            <p class="text-gray-700">014265500</p>
-                        </div>
-                        <div class="flex flex-row gap-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#02347B" class="w-6 h-6">
-                                <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
-                                <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
-                            </svg>                                               
-                            <p class="text-gray-700">info@neca.org.np</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-col gap-6">
-                    <p class="font-semibold text-gray-800">Working Hours</p>
-                    <div class="flex flex-row gap-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#02347B" class="w-6 h-6">
-                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
-                        </svg>                          
-                        <div class="flex flex-col gap-4">
-                            <p class="text-gray-700">7AM to 5:30PM Monday to Friday</p>
-                            <p class="text-gray-700">8AM to 4PM Saturday</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-col gap-6">
-                    <p class="font-semibold text-gray-800">Office Location</p>
-                    <div class="flex flex-row gap-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#02347B" class="w-6 h-6">
-                            <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
-                        </svg>                                                                
-                        <p class="text-gray-700">Bagbazar, Kathmandu Nepal</p>
-                    </div>
-                </div>
-            </div>
-            <!--contact information end-->
             
         </div>
 
