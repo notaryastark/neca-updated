@@ -629,8 +629,16 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
 .ml-auto {
   margin-left: auto;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
 .mr-4 {
@@ -808,6 +816,10 @@ video {
   justify-content: space-between;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-10 {
   gap: 2.5rem;
 }
@@ -840,8 +852,10 @@ video {
   gap: 2.25rem;
 }
 
-.gap-1 {
-  gap: 0.25rem;
+.space-x-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1046,6 +1060,10 @@ video {
   padding-left: 1.5rem;
 }
 
+.pt-8 {
+  padding-top: 2rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1146,6 +1164,11 @@ video {
 .text-gray-200 {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .text-gray-500 {
@@ -1252,6 +1275,11 @@ video {
 .hover\:text-blue-400:hover {
   --tw-text-opacity: 1;
   color: rgb(96 165 250 / var(--tw-text-opacity));
+}
+
+.hover\:text-gray-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .hover\:text-red-500:hover {
@@ -1371,6 +1399,14 @@ video {
     gap: 2.5rem;
   }
 
+  .md\:gap-12 {
+    gap: 3rem;
+  }
+
+  .md\:gap-2 {
+    gap: 0.5rem;
+  }
+
   .md\:gap-3 {
     gap: 0.75rem;
   }
@@ -1391,8 +1427,10 @@ video {
     gap: 2rem;
   }
 
-  .md\:gap-2 {
-    gap: 0.5rem;
+  .md\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:bg-blue-50 {
@@ -1445,6 +1483,10 @@ video {
 
   .md\:pl-8 {
     padding-left: 2rem;
+  }
+
+  .md\:pt-10 {
+    padding-top: 2.5rem;
   }
 
   .md\:text-2xl {
@@ -1507,6 +1549,10 @@ video {
 
   .lg\:col-span-3 {
     grid-column: span 3 / span 3;
+  }
+
+  .lg\:col-span-4 {
+    grid-column: span 4 / span 4;
   }
 
   .lg\:ml-auto {
@@ -1577,6 +1623,10 @@ video {
     gap: 3.5rem;
   }
 
+  .lg\:gap-16 {
+    gap: 4rem;
+  }
+
   .lg\:gap-4 {
     gap: 1rem;
   }
@@ -1642,6 +1692,10 @@ video {
 
   .lg\:pr-28 {
     padding-right: 7rem;
+  }
+
+  .lg\:pt-14 {
+    padding-top: 3.5rem;
   }
 
   .lg\:text-3xl {
