@@ -18,6 +18,8 @@
 
 <!--aligning body center-->
 <body class="bg-slate-50 font-jakarta">
+
+    <!--nav start-->
     <nav class="bg-white" x-data="{navbarOpen:false}">
         <!--container nav start-->
         <div class="container md:flex flex-wrap items-center justify-between mx-auto py-2">
@@ -41,11 +43,11 @@
             <div class="w-full md:inline-flex md:w-auto mt-2 mt:mt-0" :class="{'hidden':!navbarOpen, 'flex':navbarOpen}">
                 <ul class="w-full lg:w-auto flex flex-col md:items-center md:flex-row">
                     <li>
-                        <a href="index.html" class="flex px-4 py-2 rounded-md text-blue-600">Home</a>
+                        <a href="index.html" class="flex px-4 py-2 rounded-md">Home</a>
                     </li>
                     <!--dropdown about start-->
                     <li class="relative" x-data="{dropdownOpen:false}">
-                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md hover:text-blue-400"
+                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md text-blue-600 hover:text-blue-400"
                         @click="dropdownOpen = !dropdownOpen"
                         >About</button>
                         <!--dropdown menu start-->
@@ -102,10 +104,13 @@
                         <div class="md:absolute bg-white md:bg-blue-50 right-0 rounded-md p-2" :class="{'hidden':!dropdownOpen, 'flex flex-col':dropdownOpen}">
                             <ul class="space-y-2">
                                 <li>
-                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Events</a>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Education Fair</a>
                                 </li>
                                 <li>
                                     <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Universities Abroad</a>
+                                </li> 
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">News Room</a>
                                 </li> 
                                 <li>
                                     <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Calendar</a>
@@ -128,6 +133,7 @@
         </div>
         <!--container nav end-->
     </nav>
+    <!--nav end-->
 
     <!--sample-->
     <div id="menu" class="fixed z-90 w-0 h-0 flex justify-center items-center bg-gray-900 opacity-0 duration-700">
@@ -388,8 +394,9 @@
                         <div class="flex flex-col mb-5 gap-4">
                             <h4 class="text-slate-400">ACTIVITIES</h4>
                             <ul class=" flex flex-col text-gray-200">
-                                <a href="#" class="hover:text-red-500">Events</a>
+                                <a href="#" class="hover:text-red-500">Education Fair</a>
                                 <a href="#" class="hover:text-red-500">Universities Abroad</a>
+                                <a href="#" class="hover:text-red-500">News Room</a>
                                 <a href="#" class="hover:text-red-500">Calendar</a>
                                 <a href="#" class="hover:text-red-500">Useful Links</a>
                             </ul>

@@ -18,6 +18,7 @@
 
 <!--aligning body center-->
 <body class="bg-slate-50 font-jakarta">
+
     <!--nav start-->
     <nav class="bg-white" x-data="{navbarOpen:false}">
         <!--container nav start-->
@@ -46,8 +47,9 @@
                     </li>
                     <!--dropdown about start-->
                     <li class="relative" x-data="{dropdownOpen:false}">
-                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md hover:text-blue-400"
-                        @click="dropdownOpen = !dropdownOpen">About</button>
+                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md text-blue-600 hover:text-blue-400"
+                        @click="dropdownOpen = !dropdownOpen"
+                        >About</button>
                         <!--dropdown menu start-->
                         <div class="md:absolute bg-white md:bg-blue-50 right-0 rounded-md p-2" :class="{'hidden':!dropdownOpen, 'flex flex-col':dropdownOpen}">
                             <ul class="space-y-2">
@@ -73,8 +75,9 @@
                     <!--dropdown about end-->
                     <!--dropdown members start-->
                     <li class="relative" x-data="{dropdownOpen:false}">
-                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md text-blue-600 hover:text-blue-400"
-                        @click="dropdownOpen = !dropdownOpen">Members</button>
+                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md hover:text-blue-400"
+                        @click="dropdownOpen = !dropdownOpen"
+                        >Members</button>
                         <!--dropdown menu start-->
                         <div class="md:absolute bg-white md:bg-blue-50 right-0 rounded-md p-2" :class="{'hidden':!dropdownOpen, 'flex flex-col':dropdownOpen}">
                             <ul class="space-y-2">
@@ -95,15 +98,19 @@
                     <!--dropdown activities start-->
                     <li class="relative" x-data="{dropdownOpen:false}">
                         <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md hover:text-blue-400"
-                        @click="dropdownOpen = !dropdownOpen">Activities</button>
+                        @click="dropdownOpen = !dropdownOpen"
+                        >Activities</button>
                         <!--dropdown menu start-->
                         <div class="md:absolute bg-white md:bg-blue-50 right-0 rounded-md p-2" :class="{'hidden':!dropdownOpen, 'flex flex-col':dropdownOpen}">
                             <ul class="space-y-2">
                                 <li>
-                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Events</a>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Education Fair</a>
                                 </li>
                                 <li>
                                     <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Universities Abroad</a>
+                                </li> 
+                                <li>
+                                    <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">News Room</a>
                                 </li> 
                                 <li>
                                     <a href="#" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Calendar</a>
