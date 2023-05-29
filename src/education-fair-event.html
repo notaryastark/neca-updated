@@ -1,0 +1,314 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neca Website</title>
+
+  <link href="/dist/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous"/> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.0/tailwind.min.css" integrity="sha256-CAI/7ThhltsmP2L2zKBYa7FknB3ZwFbD0nqL8FCdxdc=" crossorigin="anonymous"/> -->
+
+</head>
+
+<!--aligning body center-->
+<body class="bg-slate-100 font-jakarta">
+    <!--nav start-->
+    <nav class="bg-white" x-data="{navbarOpen:false}">
+        <!--container nav start-->
+        <div class="container md:flex flex-wrap items-center justify-between mx-auto py-2">
+            <div class="flex sm:flex sm:justify-between items-center">
+                <!--logo start-->
+                <a href="index.html"><img class="h-24 inline-flex md:shrink-0" src="assets/images/logo.jpg" alt=""></a>
+                <!--logo end-->
+    
+                <!--toggler button start-->
+                <button class="md:hidden inline-flex items-center justify-center border h-10 w-10 ml-auto rounded-md outline-none focus:outline-none"
+                    @click="navbarOpen = !navbarOpen">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>  
+                </button>
+                <!--toggler button end-->
+            </div>
+            
+    
+            <!--menu start-->
+            <div class="w-full md:inline-flex md:w-auto mt-2 mt:mt-0" :class="{'hidden':!navbarOpen, 'flex':navbarOpen}">
+                <ul class="w-full lg:w-auto flex flex-col md:items-center md:flex-row">
+                    <li>
+                        <a href="index.html" class="flex px-4 py-2 rounded-md">Home</a>
+                    </li>
+                    <!--dropdown about start-->
+                    <li class="relative" x-data="{dropdownOpen:false}">
+                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md hover:text-blue-400"
+                        @click="dropdownOpen = !dropdownOpen"
+                        >About</button>
+                        <!--dropdown menu start-->
+                        <div class="md:absolute bg-white md:bg-blue-50 right-0 rounded-md p-2" :class="{'hidden':!dropdownOpen, 'flex flex-col':dropdownOpen}">
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="about.html" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="mission-vision.html" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Mission and Vision</a>
+                                </li>
+                                <li>
+                                    <a href="aim-obj.html" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Aims and Objectives</a>
+                                </li>
+                                <li>
+                                    <a href="president-message.html" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Message From President</a>
+                                </li> 
+                                <li>
+                                    <a href="executive-board.html" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Executive Board</a>
+                                </li>    
+                            </ul>
+                        </div>
+                        <!--dropdown menu end-->
+                    </li>
+                    <!--dropdown about end-->
+                    <!--dropdown members start-->
+                    <li class="relative" x-data="{dropdownOpen:false}">
+                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md hover:text-blue-400"
+                        @click="dropdownOpen = !dropdownOpen"
+                        >Members</button>
+                        <!--dropdown menu start-->
+                        <div class="md:absolute bg-white md:bg-blue-50 right-0 rounded-md p-2" :class="{'hidden':!dropdownOpen, 'flex flex-col':dropdownOpen}">
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="member-directory.html" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Member Directory</a>
+                                </li>
+                                <li>
+                                    <a href="membership-application.html" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Membership Application</a>
+                                </li>  
+                            </ul>
+                        </div>
+                        <!--dropdown menu end-->
+                    </li>
+                    <!--dropdown members end-->
+                    <li>
+                        <a href="gallery-main.html" class="flex px-4 py-2 rounded-md hover:text-blue-400">Gallery</a>
+                    </li>
+                    <!--dropdown activities start-->
+                    <li class="relative" x-data="{dropdownOpen:false}">
+                        <button href="#" class="w-full flex outline-none focus:outline-none px-4 py-2 rounded-md text-blue-600 hover:text-blue-400"
+                        @click="dropdownOpen = !dropdownOpen"
+                        >Activities</button>
+                        <!--dropdown menu start-->
+                        <div class="md:absolute bg-white md:bg-blue-50 right-0 rounded-md p-2" :class="{'hidden':!dropdownOpen, 'flex flex-col':dropdownOpen}">
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="education-fair.html" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Education Fair</a>
+                                </li>
+                                <li>
+                                    <a href="universities-abroad.html" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Universities Abroad</a>
+                                </li> 
+                                <li>
+                                    <a href="news-room.html" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">News Room</a>
+                                </li> 
+                                <li>
+                                    <a href="calendar.html" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Calendar</a>
+                                </li>  
+                                <li>
+                                    <a href="useful-links.html" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Useful Links</a>
+                                </li>   
+                            </ul>
+                        </div>
+                        <!--dropdown menu end-->
+                    </li>
+                    <!--dropdown activities end-->
+                    <li>
+                        <button href="contact-us.html" class="flex px-4 py-2 rounded-md md:text-white md:bg-red-800 md:hover:bg-red-600 md:hover:text-white">Contact Us</button>
+                    </li>
+                </ul>
+            </div>
+            <!--menu end-->
+    
+        </div>
+        <!--container nav end-->
+    </nav>
+    <!--nav end-->
+    
+    <!--body start-->
+    <div class="main-body">
+        
+        <!--image section start-->
+        <img src="assets/images/edu-fair.png" alt="">
+        <!--image section end-->
+
+        <!--breadcrumbs section start-->
+        <div class="container pt-8 md:pt-10 lg:pt-14">
+            <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                <li class="inline-flex items-center">
+                    <a href="index.html" class="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-400">
+                    <svg aria-hidden="true" class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>Home</a>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                      <svg aria-hidden="true" class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                      <a href="education-fair.html" class="ml-1 text-sm font-medium text-gray-500 hover:text-gray-400">Education Fair</a>
+                    </div>
+                  </li>
+                <li class="page">
+                  <div class="flex items-center">
+                    <svg aria-hidden="true" class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                    <span class="ml-1 text-sm font-medium text-gray-500">Details</span>
+                  </div>
+                </li>
+              </ol>
+        </div>
+        <!--breadcrumbs section end-->
+
+        <div class="container flex flex-col py-8 md:py-10 lg:py-14 gap-10 md:gap-12 lg:gap-14">
+            <div class="flex flex-col gap-4 md:gap-6">
+                <div class="flex flex-row gap-2 md:gap-4 h-6">
+                    <p class="text-blue-800 font-medium">March 20, 2023</p>
+                    <p class="text-blue-800 font-medium pl-4 border-l-2 border-blue-700">10:00 AM - 5:00 PM</p>
+                </div>
+                <div class="flex flex-col gap-2 lg:gap-4">
+                    <h2 class="font-bold text-xl md:text-2xl text-gray-800">9th NECA Educational Fair 2015</h2>
+                    <p class="text-gray-700 line-clamp-3 md:line-clamp-4">Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.</p>
+                </div>
+                <button class="bg-blue-900 text-white px-4 py-2 rounded w-max">Register Now!</button>
+            </div>
+
+            <div class="flex flex-col gap-4 md:gap-6 lg:gap-9">
+
+                <p class="col-span-2 md:col-span-3 text-xl md:text-2xl lg:text-3xl font-bold">Similar Events</p>
+
+                <div class="flex flex-col bg-white rounded-xl border-2 border-gray-200">
+                    <!--article1 start-->
+                    <a href="education-fair-event.html">
+                        <div class="flex flex-col md:grid grid-cols-3 lg:grid-cols-7 align-middle gap-4 px-5 py-5 border-b-2 border-gray-200">
+                            <img class="rounded-lg" src="assets/images/article.png" alt="">
+                            <div class="col-span-2 lg:col-span-6 flex flex-col lg:gap-1 justify-center">
+                                <span class="text-gray-800 pb-2 md:pb-2 lg:pb-2">Feb 22</span>
+                                <p class="text-xl lg:text-2xl font-bold text-gray-800 pb-2 md:pb-2 lg:pb-3">2nd NECA Australia New Zealand Educational Fair</p>
+                                <p class="text-gray-800">Lorem ipsum dolor sit amet consectetur. Enim tortor condimentum eget elementum. Pellentesque quam justo ut ullamcorper. Sollicitudin eget integer suspendisse sed nisl magna scelerisque cursus et. </p>
+                            </div>
+                        </div>
+                    </a>
+                    <!--article1 end-->
+
+                    <!--article2 start-->
+                    <a href="education-fair-event.html">
+                        <div class="flex flex-col md:grid grid-cols-3 lg:grid-cols-7 align-middle gap-4 px-5 py-5 border-b-2 border-gray-200">
+                            <img class="rounded-lg" src="assets/images/article-1.png" alt="">
+                            <div class="col-span-2 lg:col-span-6 flex flex-col lg:gap-1 justify-center">
+                                <span class="text-gray-800 pb-2 md:pb-2 lg:pb-2">Feb 22</span>
+                                <p class="text-xl lg:text-2xl font-bold text-gray-800 pb-2 md:pb-2 lg:pb-3">2nd NECA Australia New Zealand Educational Fair</p>
+                                <p class="text-gray-800">Lorem ipsum dolor sit amet consectetur. Enim tortor condimentum eget elementum. Pellentesque quam justo ut ullamcorper. Sollicitudin eget integer suspendisse sed nisl magna scelerisque cursus et. </p>
+                            </div>
+                        </div>
+                    </a>
+                    <!--article2 end-->
+                </div>
+            </div>
+
+            <!--pagination start-->
+            <div class="flex justify-center">
+                <ul class="inline-flex gap-4 md:gap-6 lg:gap-8 items-center">
+                    <li>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                            </svg>  
+                        </a>                            
+                    </li>
+                    <li class="inline-flex gap-3 md:gap-4 lg:gap-5">
+                        <a href="#" class="flex w-10 h-10 bg-blue-900 font-semibold text-white rounded-full justify-center items-center">
+                            <p>1</p>
+                        </a>
+                        <a href="#" class="flex w-10 h-10 bg-none font-bold text-gray-600 rounded-full justify-center items-center">
+                            <p>2</p>
+                        </a>
+                        <a href="" class="flex w-10 h-10 bg-none font-bold text-gray-600 rounded-full justify-center items-center">
+                            <p>3</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg> 
+                        </a>                            
+                    </li>
+                </ul>
+            </div>
+            <!--pagination end-->
+
+        </div>
+
+        <!--footer start-->
+        <footer>
+            <!--footer section start-->
+            <div class="bg-slate-800">
+                <div class="links container py-4">
+
+                    <!--desktop view start-->
+                    <div class="grid lg:grid-cols-5 md:grid-cols-2 sm:justify-center lg:py-12 md:py-8">
+                        <div class="flex flex-col mb-5 gap-4">
+                            <h4 class="text-slate-400">ABOUT</h4>
+                            <ul class=" flex flex-col text-gray-200">
+                                <a href="about.html" class="hover:text-red-500">About Us</a>
+                                <a href="mission-vision.html" class="hover:text-red-500">Mission and Vision</a>
+                                <a href="aim-obj.html" class="hover:text-red-500">Aims and Objectives</a>
+                                <a href="president-message.html" class="hover:text-red-500">Message From President</a>
+                                <a href="executive-board.html" class="hover:text-red-500">Executive Board</a>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col mb-5 gap-4">
+                            <h4 class="text-slate-400">MEMBERS</h4>
+                            <ul class=" flex flex-col text-gray-200">
+                                <a href="member-directory.html" class="hover:text-red-500">Member Directory</a>
+                                <a href="membership-application.html" class="hover:text-red-500">Membership Application</a>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col mb-5 gap-4">
+                            <a href="gallery-main.html" class="text-slate-400">GALLERY</a>
+                        </div>
+                        <div class="flex flex-col mb-5 gap-4">
+                            <h4 class="text-slate-400">ACTIVITIES</h4>
+                            <ul class=" flex flex-col text-gray-200">
+                                <a href="education-fair.html" class="hover:text-red-500">Education Fair</a>
+                                <a href="universities-abroad.html" class="hover:text-red-500">Universities Abroad</a>
+                                <a href="news-room.html" class="hover:text-red-500">News Room</a>
+                                <a href="calendar.html" class="hover:text-red-500">Calendar</a>
+                                <a href="useful-links.html" class="hover:text-red-500">Useful Links</a>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col mb-5 gap-4">
+                            <h4 class="text-slate-400">SIGN UP FOR OUR NEWSLETTER</h4>
+                            <span class="text-gray-200">Sign up to our mailing list and get update to our latest news and notices</span>
+                            <form class="flex flex-row">
+                                <input class="pl-2 w-36" type="text" name="" id="" placeholder="Email address">
+                                <button class="bg-red-700 text-white px-4 py-2 rounded-sm">Sign Up</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!--desktop view end-->
+
+                </div>
+            </div>
+            <!--footer section end-->
+            
+            <!--copyright section start-->
+            <div class="copyright bg-slate-900 px-8 py-3">
+                <span class="flex flex-row items-center justify-center text-white">© 2023. National Education Consultancy Association. All rights reserved.</span>
+            </div>
+            <!--copyright section end-->
+
+        </footer>
+        <!--footer end-->
+
+    </div>
+    <!--body end-->
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
