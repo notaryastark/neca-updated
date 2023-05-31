@@ -124,7 +124,7 @@
                     </li>
                     <!--dropdown activities end-->
                     <li>
-                        <button href="contact-us.html" class="flex px-4 py-2 rounded-md md:text-white md:bg-red-800 md:hover:bg-red-600 md:hover:text-white">Contact Us</button>
+                        <a href="contact-us.html" class="flex px-4 py-2 rounded-md md:text-white md:bg-red-800 md:hover:bg-red-600 md:hover:text-white">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -152,19 +152,19 @@
     <!--body slate start-->
     <div class="main-body bg-slate-100">
         <!--hero section start-->
-        <div class="container py-8 lg:py-24 md:py-10 flex flex-col-reverse lg:flex-row item-center gap-6 lg:gap-14 md:gap-8">
-            <div class=" flex flex-col items-start gap-3 lg:gap-10 md:gap-6">
+        <div class="container py-8 lg:py-24 md:py-10 flex flex-col-reverse lg:grid grid-cols-12 item-center gap-6 lg:gap-14 md:gap-8">
+            <div class=" flex flex-col col-span-7 justify-center gap-3 lg:gap-10 md:gap-6">
                 <div class="flex flex-col justify-between gap-2 md:gap-4">  
-                    <h1 class="text-2xl lg:text-6xl md:text-4xl font-semibold lg:font-extrabold md:font-semibold">Achieving Your Educational Dreams</h1>
+                    <h1 class="text-2xl lg:text-6xl md:text-4xl font-semibold lg:font-bold">Achieving Your Educational Dreams</h1>
                     <span>Full-service agency dedicated to providing personalized guidance, expert assistance and comprehensive support for all aspects of your abroad education journey</span>
                 </div>
-                <button class="btn-red px-4 lg:px-6 md:px-4 py-3 lg:py-4 md:py-3 font-semibold text-sm md:text-base gap-2">Learn More
+                <button class="btn-red w-max px-4 lg:px-6 md:px-4 py-3 lg:py-4 md:py-3 font-semibold text-sm md:text-base gap-2">Learn More
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
                     </svg>                      
                 </button>
             </div>
-            <div>
+            <div class="col-span-5">
                 <img src="assets/images/Photo.png" alt="">
             </div>
         </div>
@@ -172,14 +172,14 @@
 
         <!--message from president start-->
         <div class="container">
-            <div class="flex flex-col lg:flex-row bg-blue-950 items-center gap-10 py-6 lg:py-20 md:py-16 px-4 lg:pr-28 md:px-6">
-                <img class="lg:h-60 md:h-40 border-blue-900 lg:border-r-2 lg:px-20" src="assets/images/president.png" alt="">
+            <div class="flex flex-col lg:flex-row bg-blue-950 items-center gap-10 py-8 lg:py-20 md:py-10 px-4 lg:pr-28 md:px-6">
+                <img class="h-32 lg:h-60 md:h-40 border-blue-900 lg:border-r-2 lg:px-20" src="assets/images/president.png" alt="">
                 <div class="flex flex-col text-white gap-4 lg:gap-8 md:gap-6">
-                    <div class="flex flex-col gap-2 lg:gap-6 md:gap-4">
+                    <div class="flex flex-col items-center lg:items-start gap-2 lg:gap-6 md:gap-4">
                         <h2 class="flex flex-col text-xl lg:text-3xl md:text-2xl font-extrabold">Message From the President</h2>
-                        <p>NECA, in a very short span of its struggle tenure, has been succeeding in gaining a better reputation for the quality educational services that are provided by its members. NECA members are dedicated to providing quality service for students and their guardians in the first place.</p>
+                        <p class="text-left md:text-center lg:text-left">NECA, in a very short span of its struggle tenure, has been succeeding in gaining a better reputation for the quality educational services that are provided by its members. NECA members are dedicated to providing quality service for students and their guardians in the first place.</p>
                     </div>
-                    <div>
+                    <div class="flex flex-col items-start md:items-center lg:items-start">
                         <p>Santosh Pyakurel</p>
                         <p class="text-blue-100">President, NECA</p>
                     </div>
@@ -189,15 +189,15 @@
         <!--message from president end-->  
 
         <!--about us start-->
-        <div class="container py-6 lg:py-24 md:py-10 flex flex-col-reverse lg:flex-row items-center gap-6 lg:gap-14 md:gap-8">
-            <div class=" flex flex-col items-start gap-3 lg:gap-10 md:gap-6">
+        <div class="container py-6 lg:py-24 md:py-10 flex flex-col-reverse lg:grid grid-cols-12 items-center gap-6 lg:gap-14 md:gap-8">
+            <div class=" flex flex-col items-start col-span-7 gap-3 lg:gap-10 md:gap-6">
                 <div class="flex flex-col justify-between gap-2 md:gap-4">  
-                    <h1 class="text-gray-800 font-semibold text-2xl lg:text-4xl md:text-4xl">About Us</h1>
+                    <h1 class="text-gray-800 font-semibold lg:font-bold text-2xl lg:text-4xl md:text-4xl">About Us</h1>
                     <span>National Educational Consultancy Association (NECA) is a non-political, non-commercial and non-profit organization, which coordinates different segments of the education industry. It is recognized as the main representative body of educational consultants and counsellors, which offers reliable, professional service.</span>
                 </div>
                 <button class="btn-red px-4 lg:px-6 md:px-4 py-3 lg:py-4 md:py-3 font-semibold text-sm md:text-base gap-2">Read More</button>
             </div>
-            <div>
+            <div class="col-span-5">
                 <img class="" src="assets/images/about-img.png" alt="">
             </div>
         </div>
@@ -211,11 +211,15 @@
                 <div class="card bg-white flex flex-col gap-4 px-10 py-9">
                     <div class="flex flex-col items-center lg:gap-4">
                         <img src="assets/images/Join.png" alt="">
-                        <span class="font-semibold">Join Us</span>
+                        <span class="text-2xl font-semibold">Join Us</span>
                     </div>
                     <div class="flex flex-col items-center lg:gap-6">
-                        <span>To be a NECA member, you are required to fill out and submit the membership application form along with your AN and company registration certificate to the office </span>
-                        <button class="font-medium text-blue-800">Read More  </button>
+                        <span class="text-center">To be a NECA member, you are required to fill out and submit the membership application form along with your AN and company registration certificate to the office </span>
+                        <button class="flex flex-row font-medium text-blue-800">Read More 
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
                 <!--card1 end-->
@@ -227,7 +231,7 @@
                         <span class="font-semibold">Members</span>
                     </div>
                     <div class="flex flex-col items-center lg:gap-6">
-                        <span>Before membership is offered, NECA executive committee members visit you in person to explore the way your consultancy deals in abroad study.</span>
+                        <span class="text-center">To protect the rights and interests of all educational consultancies throughout the country. To make educational consulting profession a noble profession.</span>
                         <button class="font-medium text-blue-800">Read More  </button>
                     </div>
                 </div>
@@ -240,7 +244,7 @@
                         <span class="font-semibold">Objectives</span>
                     </div>
                     <div class="flex flex-col items-center lg:gap-6">
-                        <span>To protect the rights and interests of all educational consultancies throughout the country. To make educational consulting profession a noble profession.</span>
+                        <span class="text-center">To protect the rights and interests of all educational consultancies throughout the country. To make educational consulting profession a noble profession.</span>
                         <button class="font-medium text-blue-800">Read More  </button>
                     </div>
                 </div>
@@ -253,7 +257,7 @@
         <!--events gallery start-->
         <div class="container py-6 lg:py-24 md:py-10 flex flex-col gap-6 lg:gap-14 md:gap-8">
             <span class="text-4xl font-bold text-gray-800">Events Gallery</span>
-            <div class="flex flex-col lg:grid grid-cols-3 grid-rows-2 justify-between lg:flex-row gap-5">
+            <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 justify-between lg:flex-row gap-5">
                 <!--event1 start-->
                 <div class=" flex flex-col gap-4">
                     <img class="" src="assets/images/g9.jpg" alt="">
@@ -319,14 +323,14 @@
 
         <!--latest news start-->
         <div class="container py-6 lg:py-24 md:py-10 flex flex-col gap-6 lg:gap-14 md:gap-8">
-            <div class="flex justify-between">
+            <div class="flex flex-col md:flex-row justify-between gap-4">
                 <span class="text-4xl font-bold text-gray-800">Latest News and Notices</span>
                 <div class="flex flex-row gap-4">
                     <button>
-                        <img class="h-12" src="assets/images/Left.png" alt="">                                                
+                        <img class="h-10 md:h-12" src="assets/images/Left.png" alt="">                                                
                     </button>
                     <button>
-                        <img class="h-12" src="assets/images/Right.png" alt="">
+                        <img class="h-10 md:h-12" src="assets/images/Right.png" alt="">
                     </button>
                 </div>
             </div>
